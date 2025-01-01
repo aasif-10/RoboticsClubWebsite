@@ -1,0 +1,174 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #051f20; /* Primary dark background */
+  color: #daf1de; /* Light text color for contrast */
+  line-height: 1.6;
+}
+
+/* Navigation and header alignment styles */
+header {
+  display: flex;
+  justify-content: space-between; /* Space between title and navigation */
+  align-items: center; /* Vertically center-align content */
+  padding: 60px;
+  padding-bottom: 0.5rem;
+  background: black; /* Matches the overall background */
+}
+
+header h1 {
+  padding: 0 40px 75px 50px;
+  font-size: 40px;
+  color: #daf1de; /* Light text color */
+  margin: 0; /* Remove default margin */
+  transition: text-shadow 0.3s ease, color 0.3s ease; /* Smooth transition for glow */
+}
+
+header h1:hover {
+  text-shadow: 0 0 10px #8eb69b, 0 0 20px #bdd6c5; /* Glowing effect */
+  color: #bde8ca; /* Subtle color change */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+nav ul {
+  font-size: 20px;
+  list-style: none;
+  padding: 20px 100px 90px;
+  margin-right: 1rem;
+  display: flex;
+  gap: 40px; /* Space between navigation items */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #8eb69b; /* Light green */
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #daf1de; /* Light text color on hover */
+  text-shadow: 0 0 10px #8eb69b, 0 0 20px #8eb69b; /* Glowing effect */
+}
+
+/* Titles with zoom and glow effect */
+h2 {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #daf1de;
+  transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth zoom and glow effect */
+}
+
+h2:hover {
+  transform: scale(1.1); /* Zoom effect */
+  text-shadow: 0 0 20px #8eb69b, 0 0 40px #8eb69b; /* Glowing effect */
+  cursor: pointer; /* Change to pointer on hover */
+}
+
+/* Paragraph styling without a visible box */
+.styled-paragraph {
+  max-width: 800px;
+  font-size: 30px;
+  margin: 0 auto; /* Center the paragraph */
+  padding: 20px; /* Inner spacing for readability */
+  background: transparent; /* Removed box appearance */
+  color: #daf1de;
+  text-align: justify;
+  line-height: 1.6;
+}
+.styled-paragraph:hover {
+  color: rgba(206, 235, 190, 0.914);
+}
+
+/* Events section */
+.events-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.events-container::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+.card {
+  margin: 2rem;
+  flex: 0 0 300px; /* Fixed width for horizontal cards */
+  background: #0b2b26; /* Matches header */
+  padding: 50px;
+  border: 1px solid #8eb69b; /* Green border */
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.card:hover {
+  transform: scale(1.1); /* Zoom effect when hovered */
+}
+
+/* Automatic scroll to card on hover */
+.card:hover ~ .card {
+  scroll-snap-align: start; /* Align the hovered card */
+}
+
+/* Contact form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  background: #163832; /* Dark greenish-blue background */
+  padding: 20px;
+  border: 1px solid #8eb69b; /* Green border */
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #daf1de;
+}
+
+form label {
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea,
+form button {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #8eb69b; /* Green border */
+  border-radius: 4px;
+  background: #235347; /* Darker green */
+  color: #daf1de;
+}
+
+form textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+form button {
+  cursor: pointer;
+  background: #8eb69b; /* Light green button */
+  color: #051f20; /* Dark text */
+  border: none;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #235347; /* Darker green hover effect */
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #0b2b26; /* Matches header */
+  color: #daf1de;
+  position: relative;
+}
